@@ -1,0 +1,74 @@
+import java.util.Scanner;
+class hotel_Details 
+{
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) throws Exception
+	{
+		boolean flag=true;
+		do{
+			System.out.println("\t\t\t\t***List of Hotel***");
+			System.out.println("\t\t\t\t1.Buhari \n\t\t\t\t2.A2B\n\t\t\t\t3.EXIT");
+			System.out.print("Slect your hotel: ");
+			int hotel=sc.nextInt();
+			switch(hotel){
+				case 1->{
+					System.out.println("*****Welcom to buhari****");
+					System.out.println("****select food****");
+					System.out.println("1.Mutton briyani \n 2.Chciken Briyani\n3.Exit");
+					System.out.print("Select Your choice: ");
+					boolean subflag=true;
+					do{
+						int choice=sc.nextInt();
+						switch(choice){
+						case 1->{
+							System.out.println("\t\t\t\tYou are selected Mutton biriyani");
+							System.out.println("\t\t\t\tPrice is: 480rs");
+						}
+						case 2->{
+							System.out.println("\t\t\t\tYou are selected Chicken biriyani");
+							System.out.println("\t\t\t\tPrice is: 280rs");
+						}
+						case 3->{
+							System.out.print("getting back to home page..");
+							Thread.sleep(2000);
+							subflag=false;
+						}
+					}
+					}while(subflag);
+				}
+				
+				case 2->{
+					System.out.println("\t\t\t\t***Welcome to A2B***");
+						System.out.println("select food");
+						System.out.println("1.IDLI \n 2.DOSA \n3.EXIT");
+					System.out.print("Select Your choice");
+					boolean subflag=true;
+					do{
+						int choice=sc.nextInt();
+						switch(choice){
+							case 1->{
+								System.out.println("\t\t\t\tYou are selected IDLI");
+							System.out.println("\t\t\t\tPrice is: 80rs");
+							}
+							case 2->{
+								System.out.println("\t\t\t\tYou are selected DOSA");
+							System.out.println("\t\t\t\tPrice is: 120rs");
+							}
+							case 3->{
+								Thread.sleep(2000);
+								System.out.print("getting back to home page..");
+								subflag=false;
+							}
+						}
+					}while(subflag);
+				}
+				case 3->{
+					flag=false;
+				}
+				default->{System.out.println("Invalid Input");}
+			}
+			
+		}while(flag);
+	}
+}
+
